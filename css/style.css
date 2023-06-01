@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(97, 96, 96);
+}
+
+/*FRANJA NEGRA DE CABECERA*/
+.black-bar {
+  height: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.left-text {
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/*CABECERA E IMAGEN*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+}
+
+/*BOTONES DE NAVEGACION ENTRE SECCIONES*/
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+nav li a {
+    color: white;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/*SECCION INICIO*/
+.homeSection {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+   
+}
+
+.homeSection h1{
+    margin-top: 0;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.homeSection p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/*SECCION INTERIOR*/
+.indoorSection {
+  background-color: black;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.indoorSection h1 {
+  text-align: center;
+  margin-bottom: 1.5cm;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 0.7cm;
+}
+
+.row h2 {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.5cm;
+  font-size: 20px;
+  color: rgb(159, 164, 0);
+  margin-left: 23%;
+}
+
+.column {
+  flex-basis: calc(33% - 1cm);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.column p {
+  width: 65%;
+}
+
+.img-left img,
+.img-right img {
+  width: 65%;
+  height: auto;
+}
+
+.img-right {
+  margin-left: -2.5cm;
+}
+
+.img-left {
+  margin-right: -2.5cm;
+}
+
+.finalP{
+  text-align: center;
+}
+
+/*TEST RESPONSIVE INDOORSECTION*/
+@media screen and (max-width: 900px) {
+  .indoorSection {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .indoorSection img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .indoorSection p {
+    text-align: center;
+    padding: 10px; 
+    margin-top: 50px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+
+/*TITULOS, ENCABEZADOS, PARRAFOS*/
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.customText {
+  text-decoration: underline;
+}
+
+.customText:hover {
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+/*SECCION FEATURES*/
+.featuresSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.featuresSection h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featureRow {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.featureColumn {
+  width: 25%;
+  background-color: #c5c2c2; 
+  margin: 0 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.featureColumn p {
+  text-align: center;
+  font-size: 15px;
+}
+
+/*SECCION GALERIA*/
+.gallerySection {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallerySection h1{
+  margin-bottom: 20px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Aquí se define el número de columnas y su tamaño */
+  grid-gap: 5px; /* Aquí se define el espacio entre imágenes en la cuadrícula */
+  width: 50%; /* Aquí se define el ancho de la cuadrícula */
+  margin: 0 auto; /* Centrar la cuadrícula en el contenedor */
+}
+
+.galleryGrid img {
+  width: 100%;
+  display: block;
+}
+
+/*SECCION SIGNATURE*/
+.signatureSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(55, 55, 55);
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+.signature{
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+  
+  
+
+  
+  
+   
+
+
+
+
+
+
+
+
+
+  
+  
